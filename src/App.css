@@ -1,0 +1,30 @@
+.App
+{
+  text-align: center;
+  margin-top:10%;
+  
+}
+
+.grid
+{
+  font-size: 0;
+}
+
+.hori
+{
+    display: inline-block;
+    width:20px;
+	  height:20px;
+    border: .3px solid #6b090e;
+    background-color: blue;
+    
+}
+
+.horihover
+{
+  display: inline-block;
+  width:20px;
+  height:20px;
+  border: .3px solid #6b090e;
+  background-color:whitesmoke;
+}
