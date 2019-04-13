@@ -2,25 +2,35 @@ import React from 'react';
 
 
  export class Row extends React.Component {
+   constructor(props){
+    super(props)
+    this.state = {active: null}
+   }
+
+   toggle(){
+     this.setState({
+         active: true
+     })
+   }
+
+   backColor(){
+       if(this.state.active === true){
+           let style = {
+               backgroundColor : 'blue'
+           }
+           return style;
+       }else{
+           let style = {
+               backgroundColor : 'yellow'
+           }
+           return style;
+       }
+   }
 
     render(){
-        const x = [];
-        const iter = this.props.amount;
 
-        for(let i=0 ; i < iter; i++){
-            x.push(<div className = {this.props.className} data-id={i}></div>);
-        }
-
-        const list = x.map( (y) => y);
-
-        let rows = (
-            <div id="rows">
-                {list}
-            </div>
-        );
-            
-      
-        
+        let rows = <div className={this.props.className} style={this.backColor()} onMouseOver={() => {this.toggle()}}></div>
+                
         return rows;
     }
 }
