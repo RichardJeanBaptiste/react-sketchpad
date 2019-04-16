@@ -4,7 +4,7 @@ import React from 'react';
  export class Row extends React.Component {
    constructor(props){
     super(props)
-    this.state = {active: null}
+    this.state = {active: null, colors: this.props.color}
    }
 
    toggle(){
@@ -16,12 +16,12 @@ import React from 'react';
    backColor(){
        if(this.state.active === true){
            let style = {
-               backgroundColor : 'blue'
+               backgroundColor : this.state.colors
            }
            return style;
        }else{
            let style = {
-               backgroundColor : 'yellow'
+               backgroundColor : 'white'
            }
            return style;
        }
