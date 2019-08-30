@@ -14,4 +14,4 @@ You will also see any lint errors in the console.
 
 ### Check it out live at 
 
-https://richinbk.github.io/react-sketchpad/
+https://RichardJeanBaptiste.github.io/react-sketchpad/
